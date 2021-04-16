@@ -1,5 +1,5 @@
 const { unDirUnW, unDirWei, dirUnw, dirWei } = require("./examples");
-const makeGraph = require("./create-G");
+const makeGraph = require("./graphs");
 
 console.log("unDirUnW: ", unDirUnW);
 console.log("unDirWei: ", unDirWei);
