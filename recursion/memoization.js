@@ -44,5 +44,25 @@ var fibonacciMemo = (function () {
     return f;
 })();
 
-let result = fibonacciMemo(6);
+// let result = fibonacciMemo(6);
+// console.log(result);
+
+/**
+ * Find fibonacci sequence with memoization. alternative approach
+ * @param {number} n
+ * @return {number}
+ */
+var fib = function (n) {
+    let memo = { 0: 0, 1: 1 };
+    let fibInside = (i) => {
+        if (i === 0) return 0;
+        if (i === 1) return 1;
+        if (i in memo) return memo[i];
+        memo[i] = fibInside(i - 1) + fibInside(i - 2);
+        return memo[i];
+    };
+    return fibInside(n);
+};
+
+let result = fib(8);
 console.log(result);
