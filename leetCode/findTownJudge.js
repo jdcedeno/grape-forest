@@ -49,11 +49,19 @@
  * @param {number[][]} trust
  * @return {number}
  */
-var findJudge = function (N, trust) {};
+var findJudge = function (N, trust) {
+    let G = createDirectedGraph(N, trust);
+    return G;
+};
 
 /**
- *
- * @param {Number[][]} edgeList
+ * Create adjacency matrix given the number of nodes and edgeList of the graph
+ * 1. create empty array with length n to store the results
+ * 2. for loop to fill the array with empty lists. AdjList = [[],[],...,[]]
+ * 3. handle weighted and unweighted cases.
+ * @param {number} n
+ * @param {number[][]} edgeList
+ * @returns {number[][]} adjList
  */
 const createDirectedGraph = function (n, edgeList) {
     let adjList = Array(n);
@@ -72,10 +80,10 @@ const createDirectedGraph = function (n, edgeList) {
     return adjList;
 };
 
-result = createDirectedGraph(4, [
-    [0, 1],
+let result = findJudge(4, [
     [0, 3],
-    [1, 3],
+    [0, 1],
+    [1, 2],
     [2, 1],
     [2, 3],
 ]);
