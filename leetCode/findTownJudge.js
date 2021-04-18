@@ -80,12 +80,12 @@ const createDirectedGraph = function (n, edgeList) {
     return adjList;
 };
 
-let result = findJudge(4, [
-    [0, 3],
-    [0, 1],
-    [1, 2],
-    [2, 1],
-    [2, 3],
-]);
-
-console.log(result);
+const dfs = function (G) {
+    let visited = {}; //memoization: remember visited nodes
+    let counter = 0;
+    const dfsInside = function (i) {
+        for (node in G) {
+            if (node === [])
+        }
+    };
+};

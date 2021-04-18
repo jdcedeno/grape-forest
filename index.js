@@ -1,14 +1,26 @@
-const { unDirUnW, unDirWei, dirUnw, dirWei } = require("./examples");
-const makeGraph = require("./graphs");
+const Queue = require("./data-structures/Queue");
+const log = console.log;
 
-let adjList1 = makeGraph(unDirUnW);
-console.log(adjList1);
+let q = new Queue();
 
-let adjList2 = makeGraph(unDirWei);
-console.log(adjList2);
+log(q.queue);
 
-let adjList3 = makeGraph(dirUnw);
-console.log(adjList3);
+q.enqueue("hello");
+log(q.queue);
 
-let adjList4 = makeGraph(dirWei);
-console.log(adjList4);
+q.enqueue("world");
+log(q.queue);
+
+let res = q.dequeue();
+log(q.queue);
+log(res);
+
+q.enqueue("we");
+log(q.queue);
+
+q.enqueue("fine");
+log(q.queue);
+
+let res3 = q.dequeue();
+log(q.queue);
+log(res3);
