@@ -1,26 +1,24 @@
-const Queue = require("./data-structures/Queue");
+const Graph = require("./data-structures/Graph");
 const log = console.log;
 
-let q = new Queue();
+let graph = new Graph();
 
-log(q.queue);
+log(graph.G);
 
-q.enqueue("hello");
-log(q.queue);
+graph.createFromEdgeList(4, true, [
+    [0, 1],
+    [0, 3],
+    [1, 3],
+    [2, 1],
+    [2, 3],
+]);
 
-q.enqueue("world");
-log(q.queue);
+log(graph.G);
 
-let res = q.dequeue();
-log(q.queue);
-log(res);
+graph.addNodes([[1, 2, 3]]);
 
-q.enqueue("we");
-log(q.queue);
+log(graph.G);
 
-q.enqueue("fine");
-log(q.queue);
+graph.addNodes([[3, 4]]);
 
-let res3 = q.dequeue();
-log(q.queue);
-log(res3);
+log(graph.G);

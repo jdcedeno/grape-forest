@@ -80,12 +80,10 @@ const createDirectedGraph = function (n, edgeList) {
     return adjList;
 };
 
-const dfs = function (G) {
-    let visited = {}; //memoization: remember visited nodes
-    let counter = 0;
-    const dfsInside = function (i) {
-        for (node in G) {
-            if (node === [])
-        }
+const dfs = function (edgeList, s) {
+    let n = edgeList.length;
+    let visited = Array(n); //memoization: remember visited nodes
+    const dfsInside = function () {
+        return;
     };
 };
